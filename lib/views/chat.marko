@@ -1,0 +1,42 @@
+<include("./layout/layout.marko") title="聊天模块">
+  <@head>
+    <script src="/js/chat.js"></script>
+  </@head>
+  <@body>
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+      <ul class="layui-tab-title">
+        <li class="layui-this">模块管理</li>
+        <li>聊天记录</li>
+      </ul>
+      <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+          <fieldset class="layui-elem-field layui-field-title site-demo-button" style="margin-top: 30px;">
+            <legend>模块管理</legend>
+          </fieldset>
+          <button id="sync-log" data-method="offset" data-type="auto" class="layui-btn">同步到数据库</button>
+        </div>
+        <div class="layui-tab-item">
+          <fieldset class="layui-elem-field layui-field-title site-demo-button" style="margin-top: 30px;">
+            <legend>聊天记录</legend>
+          </fieldset>
+          <button id="chat-table-reload" data-method="offset" data-type="auto" class="layui-btn">刷新</button>
+          <table id="chat-log" lay-filter="test"></table>
+          <script type="text/html" id="tableDateTpl">
+            <span>
+              {{new Date(d.date).format("yyyy-MM-dd HH:mm:ss")}}
+            </span>
+          </script>
+          <script type="text/html" id="tableDataTpl">
+            <span>
+              {{d.data?JSON.stringify(d.data):''}}
+            </span>
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+    </script>
+  </@body>
+</include>

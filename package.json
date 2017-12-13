@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "koa-router": "^7.3.0",
+    "koa-session": "^5.5.1",
+    "koa-static": "^4.0.2",
     "marko": "^4.7.1"
   }
 }
