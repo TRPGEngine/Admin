@@ -1,5 +1,5 @@
 {
-  "name": "trpg-admin",
+  "name": "trpg-dashboard",
   "version": "1.0.0",
   "description": "admin web panel with TRPG service",
   "main": "index.js",
