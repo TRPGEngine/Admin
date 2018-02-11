@@ -23,7 +23,7 @@
           <input type="text" name="_captcha" lay-verify="required" placeholder="请输入验证码" maxlength="4" autocomplete="off" class="layui-input">
         </div>
         <div class="layui-input-inline">
-          <img class="captcha" src="/captcha" />
+          <img class="captcha" src="./captcha" />
         </div>
       </div>
       <div class="layui-form-item">
@@ -37,7 +37,7 @@
     layui.use('form', function(){
       var form = layui.form;
       var updateCaptcha = function() {
-        $(".captcha").attr('src', '/captcha?' + Math.random())
+        $(".captcha").attr('src', './captcha?' + Math.random())
       }
 
       //监听提交
