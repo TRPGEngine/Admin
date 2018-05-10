@@ -29,7 +29,7 @@
       </tr>
       <tr>
         <td>运行时间</td>
-        <td>{{(d.uptime/60/60).toFixed(3)}} 小时 ( {{(d.uptime/60).toFixed(1)}} 分钟 )</td>
+        <td>{{(d.uptime/60/60/24).toFixed(1)}} 天 ( {{(d.uptime/60/60).toFixed(3)}} 小时 )</td>
       </tr>
     </script>
     <script src="/js/system.js"></script>
