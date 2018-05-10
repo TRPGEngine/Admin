@@ -1,19 +1,5 @@
 <include("./layout/layout.marko") title="系统信息">
   <@head>
-    <script src="/js/system.js"></script>
-  </@head>
-  <@body>
-    <fieldset class="layui-elem-field layui-field-title site-demo-button" style="margin-top: 30px;">
-      <legend>服务器信息</legend>
-    </fieldset>
-    <table class="layui-table" lay-even lay-skin="nob">
-      <colgroup>
-        <col width="150">
-        <col>
-      </colgroup>
-      <tbody id="system-info">
-      </tbody>
-    </table>
     <script id="table-template" type="text/html">
       {{# var cpus = d.cpus.length}}
       <tr></tr>
@@ -46,5 +32,19 @@
         <td>{{(d.uptime/60/60).toFixed(3)}} 小时 ( {{(d.uptime/60).toFixed(1)}} 分钟 )</td>
       </tr>
     </script>
+    <script src="/js/system.js"></script>
+  </@head>
+  <@body>
+    <fieldset class="layui-elem-field layui-field-title site-demo-button" style="margin-top: 30px;">
+      <legend>服务器信息</legend>
+    </fieldset>
+    <table class="layui-table" lay-even lay-skin="nob">
+      <colgroup>
+        <col width="150">
+        <col>
+      </colgroup>
+      <tbody id="system-info">
+      </tbody>
+    </table>
   </@body>
 </include>
